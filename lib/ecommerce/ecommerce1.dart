@@ -153,7 +153,7 @@ class EcommerceOnePage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       height: 80,
-                      // color: Colors.blue,
+                       //color: Colors.blue,
                       decoration: BoxDecoration(
                         image: DecorationImage(image: AssetImage(flashSaleImages[index]),fit: BoxFit.cover)
                       ),
@@ -201,7 +201,7 @@ class EcommerceOnePage extends StatelessWidget {
             clipper: DiagonalPathClipperOne(),
             child: Container(
               height: 110,
-              color: Colors.blue,
+              color: Colors.white,
             ),
           ),
           Container(
@@ -257,27 +257,11 @@ class EcommerceOnePage extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text('KIBABI MARKET'),
-          backgroundColor: Colors.blue,
-          elevation: 0,
-        ),
         body: SafeArea(
           child: ListView.builder(
             itemBuilder: _buildListView,
-            itemCount: 10,
+            itemCount: 20,
           )
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
-            BottomNavigationBarItem(icon: Icon(Icons.search), title: Text('Recherche')),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), title: Text('Favorite')),
-            BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('Mon compte')),
-          ],
-          currentIndex: 0,
-          type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.red,
         ),
       );
     }
